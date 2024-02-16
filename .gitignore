@@ -16,3 +16,7 @@ staticfiles/
 # logs
 logs/
 *.log
+
+#sqlite database
+*.sqlite3
+*.db
