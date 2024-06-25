@@ -1,4 +1,4 @@
-"""Views for the hardboiledegg app."""
+"""Views for the app."""
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import TemplateView
 
