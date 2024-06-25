@@ -14,6 +14,9 @@ SESSION_COOKIE_SECURE = False
 CSRF_COOKIE_HTTPONLY = False
 CSRF_COOKIE_SAMESITE = "Lax"
 
+# Internal IPs
+INTERNAL_IPS = ["127.0.0.1"]
+
 # Installed apps
 INSTALLED_APPS += [  # noqa: F405
     "debug_toolbar",
