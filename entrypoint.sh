@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Make sure the line end is LF, not CRLF !!!
+
 # database migrations
 echo "Apply database migrations..."
 python manage.py migrate 

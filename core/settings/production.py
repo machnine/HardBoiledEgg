@@ -11,14 +11,14 @@ DEBUG = False
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # Allowed hosts
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(",")
 
 # CSRF settings
 CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_HTTPONLY = True
 CSRF_COOKIE_SAMESITE = "Strict"
 # Set the CSRF_TRUSTED_ORIGINS to the domain of the website
-CSRF_TRUSTED_ORIGINS = []
+CSRF_TRUSTED_ORIGINS = os.environ.get("CSRF_TRUSTED_ORIGINS").split(",")
 
 # Session settings
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
