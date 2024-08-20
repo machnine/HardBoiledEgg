@@ -4,3 +4,4 @@ django_htmx
 djlint
 django-extensions
 django-debug-toolbar
+rich

@@ -1,6 +1,8 @@
-""" devlopment settings """
+"""devlopment settings"""
+
 # pylint: disable=wildcard-import, unused-wildcard-import
 from .base import *  # noqa: F403
+import sys
 
 # Debug mode
 DEBUG = True
@@ -44,3 +46,12 @@ LOGGING = {
         },
     },
 }
+
+# pretty print in shell_plus (django-extensions) or shell
+if "shell" in sys.argv:
+    from rich import pretty, inspect
+
+    pretty.install()
+
+    def inspector(obj):
+        inspect(obj, methods=True)
